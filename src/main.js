@@ -24,6 +24,17 @@ sumarParesFor(){
         }
     }
     return suma;
+
+}
+sumarParesFor() {
+    let suma = 0;
+
+    for(let i= 0;i <=20; i = i + 2){
+        if(i%2 === 0){
+            suma = suma +i;
+        }
+    }
+    return suma;
 }
 //ejercicio2
 contarImparesFor(){
@@ -49,6 +60,7 @@ let app = new App();
 app.sumarParesFor();
 app.restarparesFor();
 
+console.log(app.sumarParesFor());
 console.log(app.sumarParesFor());
 
 console.log(app.sumarParesWhile());
