@@ -37,8 +37,15 @@ sumarParesFor() {
     return suma;
 }
 //ejercicio2
-contarImparesFor(){
+contarImparesFor(inicio, fin){
+let impares = 0;
 
+for(let i = inicio; i<=fin; i = i + 1){
+    if(i%2 != 0){
+        impares = impares + 1;
+    }
+}
+return  impares;
 }
 
 //ejercicio3
@@ -62,5 +69,7 @@ app.restarparesFor();
 
 console.log(app.sumarParesFor());
 console.log(app.sumarParesFor());
+
+console.log(app.contarImparesFor(5, 11));
 
 console.log(app.sumarParesWhile());
