@@ -37,20 +37,20 @@ sumarParesFor() {
     return suma;
 }
 //ejercicio2
-contarImparesFor(inicio, fin){ //en realidad el inicio siempre debe ser más pequeño
+contarImparesFor(inicio, fin){    //en realidad el inicio siempre debe ser más pequeño
 let impares = 0;
 
 if(inicio > fin){
-    //variable temporal "t" para guardar el valor de inicio
+                                  //variable temporal "t" para guardar el valor de inicio
     let t =inicio;
     inicio = fin;
-    fin = t;     //invertimos el inicio, a fin le paso el valor de inicio porque se pierde el valor (fijese en la línea 46)
+    fin = t;                     //invertimos el inicio, a fin le paso el valor de inicio porque se pierde el valor (fijese en la línea 46)
 }
 //                          i= i + 1
 for(let i = inicio; i<=fin; i++){
     if(i%2 != 0){
                    
-        impares++; //es lo mismo que impares = impares + 1
+        impares++;               //es lo mismo que impares = impares + 1
     }
 }
 return  impares;
@@ -58,26 +58,32 @@ return  impares;
 
 //ejercicio3
 sumarParesWhile(){
-let i = 1;
+let i = 1;                                                 //definición de variables
 let suma = 0;
 
-    while(i<= 20){
-        if(1&2===0){
+    while(i<= 20){                                         //condición
+        if(i%2===0){             //Si i es par, lo agregamos a la suma 
             suma = suma + i;
         }
-    i = i + 1;
+                                 //Hasta aquí i nunca va a llegar a 20, lo que provocará un bucle infinito. Para eso agregaremos "i = i + 1" ó "i++""
+    i = i + 1;                                             //incremento o expresión de actualización
 }
 return suma;
 }
 }
 let app = new App();
 
+
 app.sumarParesFor();
 app.restarparesFor();
 
+
 console.log(app.sumarParesFor());
 console.log(app.sumarParesFor());
 
-console.log(app.contarImparesFor(5, 11)); //el inicio es más pequeño que el final
-console.log(app.contarImparesFor(11,5)); //el inicio es más grande que el final y da 0
+
+console.log(app.contarImparesFor(5, 11));                   //el inicio es más pequeño que el final
+console.log(app.contarImparesFor(11,5));                    //el inicio es más grande que el final y da 0
+
+
 console.log(app.sumarParesWhile());
