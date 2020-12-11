@@ -37,12 +37,20 @@ sumarParesFor() {
     return suma;
 }
 //ejercicio2
-contarImparesFor(inicio, fin){
+contarImparesFor(inicio, fin){ //en realidad el inicio siempre debe ser más pequeño
 let impares = 0;
 
-for(let i = inicio; i<=fin; i = i + 1){
+if(inicio > fin){
+    //variable temporal "t" para guardar el valor de inicio
+    let t =inicio;
+    inicio = fin;
+    fin = t;     //invertimos el inicio, a fin le paso el valor de inicio porque se pierde el valor (fijese en la línea 46)
+}
+//                          i= i + 1
+for(let i = inicio; i<=fin; i++){
     if(i%2 != 0){
-        impares = impares + 1;
+                   
+        impares++; //es lo mismo que impares = impares + 1
     }
 }
 return  impares;
@@ -70,6 +78,6 @@ app.restarparesFor();
 console.log(app.sumarParesFor());
 console.log(app.sumarParesFor());
 
-console.log(app.contarImparesFor(5, 11));
-
+console.log(app.contarImparesFor(5, 11)); //el inicio es más pequeño que el final
+console.log(app.contarImparesFor(11,5)); //el inicio es más grande que el final y da 0
 console.log(app.sumarParesWhile());
