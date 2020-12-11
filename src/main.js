@@ -70,6 +70,23 @@ let suma = 0;
 }
 return suma;
 }
+
+//ejercicio4
+contarImparesWhile(inicio, fin){
+    let i = inicio;
+    let impares = 0;
+
+    while( i <= fin){
+        
+        if (i%2 != 0) {
+            impares++;
+        }
+        
+        i++;
+    }
+
+return impares;
+}
 }
 let app = new App();
 
@@ -87,3 +104,6 @@ console.log(app.contarImparesFor(11,5));                    //el inicio es más 
 
 
 console.log(app.sumarParesWhile());
+
+
+console.log(app.contarImparesWhile(5, 11));
