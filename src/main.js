@@ -87,7 +87,26 @@ contarImparesWhile(inicio, fin){
 
 return impares;
 }
+//ejercicio5
+sumarParesDo() {
+    let i = 1; //definir variables
+    let suma = 0;
+
+    do {
+    
+        if(i%2 === 0) {         //evaluar si i es PAR, al dividirlo entre dos (usando "%"). Si i no es par, entonces continúa en la línea 100 (i++)
+            suma = suma + i;    //tiene que ser así y no "suma++" porque suma no se incrementa en 1, sino en lo que tenía más i y puede ser 2, 4, 6...(es un número par)
+        }
+        i++;
+    } while(i <= 20);           //condicion. 
+                               // Evalúa si el valor de i es menor o igual a 20 y entonces se repite hasta que esa condición ya no se cumpla
+                                 //Cuando llegue a 21 ahí termina 
+
+return suma;
 }
+
+
+} 
 let app = new App();
 
 
@@ -107,3 +126,6 @@ console.log(app.sumarParesWhile());
 
 
 console.log(app.contarImparesWhile(5, 11));
+
+
+console.log(app.sumarParesDo());
