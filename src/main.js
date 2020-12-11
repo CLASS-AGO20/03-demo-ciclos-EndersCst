@@ -79,7 +79,7 @@ contarImparesWhile(inicio, fin){
     while( i <= fin){
         
         if (i%2 != 0) {
-            impares++;
+            impares = impares +1;
         }
         
         i++;
